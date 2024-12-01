@@ -18,7 +18,8 @@ class Solution:
             1000: 'M'
         }
 
-        for n in [1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1]:
+        #for n in [1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1]:
+        for n in reversed(sorted(conversions.keys())):
             while n <= num:
                 roman += conversions[n]
                 num -= n
